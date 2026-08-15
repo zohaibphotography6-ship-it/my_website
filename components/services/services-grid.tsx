@@ -27,7 +27,7 @@ export function ServicesGrid() {
             </div>
             <div className="text-right shrink-0">
               <span className="text-label-caps text-primary block mb-1">STARTS FROM</span>
-              <span className="font-serif text-3xl text-primary">$3,500</span>
+              <span className="font-serif text-3xl text-primary">50,000 PKR</span>
             </div>
           </div>
           
@@ -94,8 +94,8 @@ export function ServicesGrid() {
           
           <div className="mt-12 pt-8 border-t border-border">
             <div className="flex justify-between items-end mb-8">
-              <span className="font-serif text-3xl text-primary">$5,200</span>
-              <span className="text-label-caps text-muted-foreground">FULL DAY FILM</span>
+              <span className="font-serif text-3xl text-primary">160,000 PKR</span>
+              <span className="text-label-caps text-muted-foreground">THREE DAY</span>
             </div>
             <Link
               href="/booking"
