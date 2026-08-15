@@ -32,14 +32,14 @@ export function Header() {
           <Image
             src="/Zohaib_Cinematics_logo.png"
             alt="Zohaib Cinematics logo"
-            width={60}
-            height={60}
-            className="w-[40px] h-[40px] object-contain"
+            width={200}
+            height={200}
+            className="w-[200px] h-[200px] object-contain"
           />
-          <div className="hidden sm:block">
+          {/* <div className="hidden sm:block">
             <span className="text-foreground font-serif text-lg tracking-wider">ZOHAIB</span>
             <span className="text-primary font-serif text-lg tracking-wider ml-1">CINEMATICS</span>
-          </div>
+          </div> */}
         </Link>
 
         {/* Desktop Navigation */}

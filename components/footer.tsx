@@ -37,8 +37,8 @@ export function Footer() {
             <Image
               src="/Zohaib_Cinematics_logo.png"
               alt="Zohaib Cinematics logo"
-              width={80}
-              height={80}
+              width={200}
+              height={200}
               className="min-w-[44px]"
             />
           </Link>
