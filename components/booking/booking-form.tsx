@@ -21,6 +21,35 @@ const INITIAL: FormState = {
   details: '',
 }
 
+const OWNER_WHATSAPP_NUMBER = '923398515585'
+
+function normaliseWhatsAppNumber(raw: string) {
+  const digits = (raw || '').replace(/\D/g, '')
+  if (!digits) return ''
+  if (digits.startsWith('00')) return digits.slice(2)
+  if (digits.startsWith('0')) return `92${digits.slice(1)}`
+  return digits
+}
+
+function buildWhatsAppLink(phone: string, text: string) {
+  const cleanPhone = normaliseWhatsAppNumber(phone)
+  if (!cleanPhone) return ''
+  return `https://wa.me/${cleanPhone}?text=${encodeURIComponent(text)}`
+}
+
+function buildInquiryMessage(data: FormState) {
+  return [
+    `Hello, I am ${data.name || 'a new client'}.`,
+    `I want to enquire about ${data.serviceType || 'your services'}.`,
+    data.date ? `Event date: ${data.date}` : '',
+    `Email: ${data.email || 'not provided'}`,
+    `WhatsApp: ${data.whatsapp || 'not provided'}`,
+    data.details ? `Details: ${data.details}` : '',
+  ]
+    .filter(Boolean)
+    .join('\n')
+}
+
 export function BookingForm() {
   const [formData, setFormData] = useState<FormState>(INITIAL)
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>(
@@ -42,6 +71,11 @@ export function BookingForm() {
     setStatus('sending')
     setErrorMessage(null)
 
+    const fallbackLink = buildWhatsAppLink(
+      OWNER_WHATSAPP_NUMBER,
+      buildInquiryMessage(formData)
+    )
+
     try {
       const res = await fetch('/api/whatsapp', {
         method: 'POST',
@@ -59,18 +93,30 @@ export function BookingForm() {
         setStatus('error')
         setErrorMessage(
           data.error ||
-            'We could not deliver your enquiry. Please try again in a moment.'
+            'We could not deliver your enquiry automatically. A WhatsApp chat is ready for you to send manually.'
         )
+
+        if (typeof window !== 'undefined' && fallbackLink) {
+          window.open(fallbackLink, '_blank', 'noopener,noreferrer')
+        }
         return
       }
 
       setCustomerDelivered(data.customerDelivered !== false)
       setStatus('success')
+
+      if (typeof window !== 'undefined' && fallbackLink) {
+        window.open(fallbackLink, '_blank', 'noopener,noreferrer')
+      }
     } catch {
       setStatus('error')
       setErrorMessage(
-        'A network error occurred. Please check your connection and try again.'
+        'A network error occurred. A WhatsApp chat has been opened so you can send your enquiry manually.'
       )
+
+      if (typeof window !== 'undefined' && fallbackLink) {
+        window.open(fallbackLink, '_blank', 'noopener,noreferrer')
+      }
     }
   }
 

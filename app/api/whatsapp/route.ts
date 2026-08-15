@@ -14,7 +14,7 @@ import { NextResponse } from 'next/server'
  * │   3. CallMeBot replies with an API key.                            │
  * │ Then set in .env.local:                                            │
  * │   CALLMEBOT_APIKEY=<CALLMEBOT_API_KEY>                             │
- * │   WHATSAPP_OWNER_NUMBER=923135833852  (digits only, no '+')        │
+ * │   WHATSAPP_OWNER_NUMBER= (digits only, no '+')        │
  * │                                                                    │
  * │ Limitation: can only deliver to the owner's registered number.     │
  * │ Customer-side confirmation is therefore not sent in this mode.     │
@@ -24,7 +24,7 @@ import { NextResponse } from 'next/server'
  * │ Meta WhatsApp Cloud API — sends to owner AND customer.             │
  * │   WHATSAPP_TOKEN=<META_GRAPH_API_TOKEN>                            │
  * │   WHATSAPP_PHONE_NUMBER_ID=<META_PHONE_NUMBER_ID>                  │
- * │   WHATSAPP_OWNER_NUMBER=923135833852                               │
+ * │   WHATSAPP_OWNER_NUMBER=923398515585                             │
  * │ Optional (required for cold customer messages):                    │
  * │   WHATSAPP_CUSTOMER_TEMPLATE=<APPROVED_TEMPLATE_NAME>              │
  * │   WHATSAPP_CUSTOMER_LANG=en_US                                     │
@@ -33,7 +33,7 @@ import { NextResponse } from 'next/server'
 
 export const runtime = 'nodejs'
 
-const DEFAULT_OWNER = '923135833852'
+const DEFAULT_OWNER = '923398515585'
 const GRAPH_VERSION = process.env.WHATSAPP_GRAPH_VERSION || 'v20.0'
 
 type EnquiryPayload = {
