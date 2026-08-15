@@ -5,23 +5,23 @@ const testimonials = [
   {
     quote:
       'They didn&rsquo;t simply photograph our wedding &mdash; they composed it. Every frame feels like a still from a feature film. An heirloom we will treasure for generations.',
-    name: 'Anaya & Vikram Mehta',
-    event: 'Udaipur Palace Wedding',
-    location: 'Taj Lake Palace · Rajasthan',
+    name: 'Anaya & Zeeshan Malik',
+    event: 'Wedding',
+    location: 'Classic Grand Marquee · Wah Cantt',
   },
   {
     quote:
       'Discreet, refined, and astonishingly talented. Their team moved through our guests like ghosts and returned with art. Worth every consideration.',
-    name: 'Sophia & Alexander Rothwell',
-    event: 'Private Estate Ceremony',
-    location: 'Villa Balbiano · Lake Como',
+    name: 'Asma & Raja Farhan',
+    event: 'Engagement Celebration',
+    location: 'Islamabad',
   },
   {
     quote:
       'From the first consultation to the final velvet-bound album, the experience felt impossibly bespoke. They captured the soul of our family, not just the day.',
-    name: 'Priya & Arjun Kapoor',
+    name: 'Anum & Adeel Khan',
     event: 'Three-Day Celebration',
-    location: 'Amanbagh · Aravalli Hills',
+    location: 'Bahria Town · Rawalpindi',
   },
 ]
 
