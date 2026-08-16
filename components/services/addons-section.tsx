@@ -2,12 +2,12 @@ import { BookOpen, Headphones, Image as ImageIcon, Plane, Users, Aperture } from
 import { Reveal } from '@/components/ui/reveal'
 
 const addons = [
-  { icon: BookOpen, title: 'Heirloom Album', price: '+ $1,800', body: 'Italian leather, hand-bound; 40 archival pages.' },
-  { icon: Aperture, title: 'Second Photographer', price: '+ $1,200', body: 'A dedicated second lens for parallel coverage.' },
-  { icon: Plane, title: 'Aerial Cinema Unit', price: '+ $950', body: 'FAA-licensed drone pilot with 6K cinema rig.' },
-  { icon: Headphones, title: 'Custom-Scored Film', price: '+ $1,500', body: 'Original composition by our in-house musicians.' },
-  { icon: ImageIcon, title: 'Editorial Print Suite', price: '+ $850', body: 'Twelve museum-grade prints, individually matted.' },
-  { icon: Users, title: 'Pre-Wedding Editorial', price: '+ $2,400', body: 'A half-day fashion-led shoot with stylist.' },
+  { icon: BookOpen, title: 'Coffee Table Album', price: '20,000 PKR', body: 'Italian leather, hand-bound; 40 archival pages.' },
+  { icon: Aperture, title: 'Second Photographer', price: '15,000 PKR', body: 'A dedicated second Camera for parallel coverage.' },
+  { icon: Plane, title: 'Aerial Cinema Unit', price: '15,000 PKR', body: 'FAA-licensed drone pilot with 6K cinema rig.' },
+  { icon: Headphones, title: 'Custom-Scored Film', price: '17,000 PKR', body: 'Original composition by our in-house musicians.' },
+  { icon: ImageIcon, title: 'Video Editorial ', price: '12,000 PKR', body: 'Wedding Film Editing Package.' },
+  { icon: Users, title: 'Pre-Wedding Editorial', price: '17,000 PKR', body: 'A half-day fashion-led shoot with stylist.' },
 ]
 
 export function AddonsSection() {
