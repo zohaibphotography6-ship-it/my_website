@@ -2,12 +2,12 @@ import { Award } from 'lucide-react'
 import { Reveal } from '@/components/ui/reveal'
 
 const features = [
-  'Vogue Weddings',
-  'Harper&rsquo;s Bazaar',
-  'Condé Nast Traveller',
-  'Brides Magazine',
-  'Architectural Digest',
-  'Tatler',
+  'Wedding Photography',
+  'Birthday Event Coverage',
+  'Product Shoots',
+  'Outdoor Shoots',
+  'Model Shoots',
+  'Engagement Photography',
 ]
 
 const accolades = [
